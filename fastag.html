@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FASTag Fraud Detection - Project Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="project-page">
+  <div class="container">
+
+    <h1>FASTag Fraud Detection System</h1>
+
+    <p>
+      This project focuses on identifying fraudulent FASTag transactions using machine learning.
+      With the rapid adoption of electronic toll collection in India, fraud attempts—such as cloned tags,
+      invalid transactions, and manipulation of toll data—have increased significantly.
+      This system analyzes transaction behavior to detect anomalies and classify suspicious activity.
+    </p>
+
+    <h2>Project Overview</h2>
+    <p>
+      FASTag generates large volumes of transaction logs, containing metadata such as vehicle class,
+      time of toll crossing, GPS zone, lane information, and payment status.
+      By applying machine learning to these logs, the system detects unusual patterns that deviate from normal behavior.
+      This helps toll agencies reduce revenue losses and strengthen road security systems.
+    </p>
+
+    <h2>Dataset Description</h2>
+    <p>
+      The dataset includes:
+    </p>
+    <ul>
+      <li><strong>Transaction ID</strong></li>
+      <li><strong>Vehicle ID / Tag ID</strong></li>
+      <li><strong>Toll booth and lane</strong></li>
+      <li><strong>Timestamp</strong></li>
+      <li><strong>Transaction amount</strong></li>
+      <li><strong>Vehicle class</strong></li>
+      <li><strong>Account balance</strong></li>
+      <li><strong>Route-based metadata</strong></li>
+    </ul>
+    <p>
+      Missing values are cleaned, timestamp features are extracted, and categorical attributes
+      (such as vehicle class or lane ID) are encoded before model training.
+    </p>
+
+    <h2>Machine Learning Approach</h2>
+    <p>
+      Both supervised and unsupervised approaches were explored:
+    </p>
+
+    <ul>
+      <li><strong>Random Forest Classifier</strong> – trained on labeled fraud/non-fraud data</li>
+      <li><strong>Isolation Forest</strong> – detects anomalies in transaction behavior</li>
+      <li><strong>Feature engineering</strong> including:
+        <ul>
+          <li>Time intervals between toll crossings</li>
+          <li>Lane consistency patterns</li>
+          <li>Vehicle class mismatches</li>
+          <li>Suspicious amount deviations</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>
+      These models help identify whether a transaction is legitimate or potentially fraudulent.
+      The system can be integrated into real-time toll systems for early detection.
+    </p>
+
+    <h2>📈 Results</h2>
+    <p>
+      The project achieved strong fraud-detection capability with:
+    </p>
+    <ul>
+      <li>High anomaly separation using Isolation Forest</li>
+      <li>High classification accuracy using Random Forest</li>
+      <li>Useful feature importance visualizations</li>
+      <li>Correlation heatmaps to understand behavioral patterns</li>
+    </ul>
+    <p>
+      The model correctly identifies several patterns of fraud such as:
+      <strong>duplicate tag use, incorrect toll charges, abnormal timestamp intervals,
+      and mismatched vehicle profiles.</strong>
+    </p>
+
+    <h2>🔗 Links</h2>
+    <ul>
+      <li>
+        <a href="YOUR_GITHUB_REPO_LINK" target="_blank">GitHub Code</a>
+      </li>
+      <li>
+        <a href="YOUR_NOTEBOOK_LINK" target="_blank">Notebook</a>
+      </li>
+    </ul>
+
+    <a class="btn" href="index.html">⬅ Back to Home</a>
+
+  </div>
+</body>
+</html>

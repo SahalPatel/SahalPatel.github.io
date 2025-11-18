@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>EEG Topomap Visualization - Project Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="project-page">
+  <div class="container">
+
+    <h1>EEG Topographic Visualization Using MNE-Python</h1>
+
+    <p>
+      This project focuses on generating EEG topographic (scalp) maps using power spectral density (PSD)
+      data and MNE-Python. The goal is to visualize how brainwave activity (such as alpha, beta, gamma bands)
+      is distributed across different regions of the scalp.
+    </p>
+
+    <h2>Project Overview</h2>
+    <p>
+      EEG signals provide valuable information about cognitive, neurological, and behavioral processes.
+      This project loads PSD values for multiple electrodes, maps them to their spatial coordinates using a standard
+      EEG montage, and visualizes the data as 2D heatmaps (topomaps). These topomaps make it easy to identify
+      patterns such as increased alpha activity in the occipital region or elevated gamma activity during tasks.
+    </p>
+
+    <h2>Dataset Description</h2>
+    <p>
+      The dataset consists of:
+    </p>
+    <ul>
+      <li><strong>PSD values</strong> for different frequency bands (alpha, beta, gamma, etc.)</li>
+      <li><strong>Channel names</strong> such as Fp1, Fp2, Cz, O1, O2</li>
+      <li><strong>Montage coordinates</strong> using a standard EEG cap layout (like 10-20 system)</li>
+    </ul>
+    <p>
+      The PSD values are loaded from CSV files and preprocessed using pandas and numpy.
+      The electrode coordinates are handled by MNE using built-in montages.
+    </p>
+
+    <h2>Signal Processing Workflow</h2>
+    <p>
+      The processing pipeline includes:
+    </p>
+    <ul>
+      <li>Loading PSD data from CSV</li>
+      <li>Merging PSD values with electrode coordinates</li>
+      <li>Normalizing or scaling the power values</li>
+      <li>Generating topomaps using <code>mne.viz.plot_topomap</code></li>
+      <li>Visualizing band-power distribution for alpha, beta, and gamma bands</li>
+    </ul>
+    <p>
+      MNE-Python handles interpolation, contour generation, and color mapping to produce clean and meaningful visualizations.
+    </p>
+
+    <h2>📈 Results</h2>
+    <p>
+      The system successfully produces visually interpretable topographic maps for multiple frequency bands.
+      These maps reveal spatial patterns of brain activity that can be used for:
+    </p>
+    <ul>
+      <li>Cognitive research</li>
+      <li>Emotion recognition</li>
+      <li>Neurofeedback and BCI applications</li>
+      <li>Clinical EEG interpretation</li>
+    </ul>
+
+    <h2>🔗 Links</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/SahalPatel/EEG-Signal-Classification-Using-Machine-Learning" target="_blank">GitHub Code</a>
+      </li>
+      <li>
+        <a href="https://github.com/SahalPatel/EEG-Signal-Classification-Using-Machine-Learning" target="_blank">Notebook</a>
+      </li>
+    </ul>
+
+    <a class="btn" href="index.html">⬅ Back to Home</a>
+
+  </div>
+</body>
+</html>
