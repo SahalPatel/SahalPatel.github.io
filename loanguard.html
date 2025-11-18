@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LoanGuard - Project Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page">
+
+  <div class="container">
+    <h1>LoanGuard — Loan Default Prediction</h1>
+    <p>
+      This project uses machine learning to predict whether a loan applicant
+      is likely to default. The system includes preprocessing, feature
+      engineering, model training, hyperparameter tuning, and evaluation.
+    </p>
+
+    <h2> Project Overview</h2>
+    <p>LoanGuard is a machine learning–based credit risk assessment system designed to predict whether a loan applicant is likely to default on a bank loan. The primary goal of the project is to help banking institutions proactively identify high-risk applicants so they can reduce losses, improve lending decisions, and offer safer credit products.
+The model analyzes borrower-level financial, behavioral, and demographic features to classify each loan application as either “Default” or “Non-Default.”</p>
+
+    <h2>Dataset</h2>
+    <p>The dataset used for this project contains a mix of numerical and categorical variables commonly used in real-world credit scoring systems.
+Some of the key features include:
+Loan Amount : total amount requested by the borrower
+Interest Rate : percentage charged on the loan
+Loan Term : duration of repayment
+Annual Income : borrowers yearly income
+Employment Length : years of employment
+DTI (Debt-to-Income Ratio) : financial stress indicator
+Delinquency History : number of past late payments
+Credit Accounts : open/closed accounts, revolving utilization
+Home Ownership : rent, own, mortgage
+Purpose of Loan : credit card, education, small business, etc.
+Before model training, the dataset is cleaned, missing values are handled, and categorical values are encoded. Outliers are also addressed to prevent model bias.</p>
+
+    <h2>🧠 Machine Learning Approach</h2>
+    <p>LoanGuard follows a complete end-to-end ML pipeline:
+Data Cleaning & Preprocessing
+Missing value treatment
+Outlier detection
+Categorical encoding (Label Encoding / One-Hot Encoding)
+Feature scaling (StandardScaler / MinMaxScaler)
+Feature Engineering
+Creation of new financial ratios
+Encoding of risk-related attributes
+Handling imbalance using class weights or SMOTE
+Model Training
+Multiple models were tested:
+Logistic Regression
+Random Forest
+Gradient Boosting
+XGBoost (performed the best)
+Model Evaluation
+Models were evaluated using:
+Accuracy
+Precision / Recall
+F1 Score
+ROC-AUC (most important for credit scoring)
+Confusion Matrix</p>
+
+    <h2> Links</h2>
+    <ul>
+      <li><a href="https://github.com/SahalPatel/LoanGuard-Bank-Loan-Default-Predictor" target="_blank">GitHub Code</a></li>
+      <li><a href="https://github.com/SahalPatel/LoanGuard-Bank-Loan-Default-Predictor" target="_blank">Notebook</a></li>
+    </ul>
+
+    <a class="btn" href="index.html">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>
