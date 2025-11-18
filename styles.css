@@ -96,4 +96,73 @@
     .main-nav{position:fixed;right:12px;top:64px;background:linear-gradient(180deg, rgba(7,18,36,0.95), rgba(2,6,23,0.95));padding:0.8rem;border-radius:10px;flex-direction:column;display:none}
     .main-nav.open{display:flex}
   }
+  :root{
+  --bg-1: #071025;      /* deep navy */
+  --bg-2: #081428;      /* slightly lighter */
+  --card: rgba(11,18,28,0.7);
+  --muted:#9aa4b2;
+  --accent:#7dd3fc;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --max-width:1100px;
+  --text:#e6eef6;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Subtle animated background + soft vignette + noise-like pattern */
+body{
+  margin:0;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+
+  /* layered background:
+     1) slow linear gradient that animates
+     2) radial vignette for depth
+     3) subtle repeating-linear-gradient for texture (very light)
+  */
+  background:
+    linear-gradient(120deg, rgba(9,20,38,0.95) 0%, rgba(7,18,36,0.95) 50%, rgba(5,22,48,0.95) 100%),
+    radial-gradient(1200px 600px at 10% 10%, rgba(10,28,48,0.08), transparent 20%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.002) 0px, rgba(255,255,255,0.002) 1px, transparent 1px, transparent 20px);
+  background-color: var(--bg-1);
+  background-attachment: fixed;
+  background-size: 200% 200%, auto, auto;
+  animation: bgShift 20s ease-in-out infinite;
+}
+
+/* subtle background animation */
+@keyframes bgShift {
+  0% { background-position: 0% 50%, center, 0 0; }
+  50% { background-position: 100% 50%, center, 0 0; }
+  100% { background-position: 0% 50%, center, 0 0; }
+}
+
+/* make cards slightly brighter and with soft border */
+.card, .hero-card, .site-footer, .site-header {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 8px 28px rgba(2,8,18,0.6);
+}
+
+/* hero tweaks */
+.hero-text h1 { color: var(--text); }
+.lead { color: rgba(230,238,246,0.78); }
+
+/* buttons */
+.btn { background: linear-gradient(90deg,var(--accent), #4fd1ff); color:#042431; box-shadow: 0 6px 18px rgba(9,37,44,0.25); }
+.btn.outline { background: transparent; border: 1px solid rgba(255,255,255,0.06); color:var(--text); }
+
+/* slightly lift project cards on hover */
+.card:hover { transform: translateY(-6px); transition: transform 220ms ease; box-shadow: 0 18px 40px rgba(2,8,23,0.6); }
+
+/* ensure good contrast for images on dark bg */
+.card img, .hero-card img { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0)); border-radius:8px; }
+
+/* smaller screen: reduce animation for perf */
+@media (max-width:900px){
+  body { animation: none; background-size: cover; }
+}
+
   
