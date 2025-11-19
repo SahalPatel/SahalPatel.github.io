@@ -68,11 +68,18 @@ body{
 #nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.4rem}
 
 /* HERO */
-.hero{padding:4rem 0}
+.hero{padding:2rem 0}
 .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:2.5rem;align-items:center}
 .hero-text h1{font-size:2.1rem;margin:0 0 0.5rem;color: var(--text);}
 .hero-text .accent{color:var(--accent)}
 .lead{color: rgba(230,238,246,0.78);margin:0 0 1rem;font-size:1.05rem}
+.sub-lead {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: -0.4rem 0 1.2rem;  /* slightly pulls it closer */
+  opacity: 0.9;
+}
+
 .hero-ctas{display:flex;gap:1rem;margin-bottom:1rem}
 
 /* BUTTONS */
